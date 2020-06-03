@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.admin.product.AdminCreateProductFragment">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/editProductLoading"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/loader"
+        app:layout_constraintEnd_toEndOf="@+id/editProductBtn"
+        app:layout_constraintStart_toStartOf="@+id/editProductBtn"
+        app:layout_constraintTop_toBottomOf="@+id/editProductBtn" />
+
+    <Button
+        android:id="@+id/editProductBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/cardview_dark_background"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="@string/editProductBtn"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editProductAmountTxtLayout" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.App.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@android:color/white" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editProductNameTxtLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editProductDesc"
+        app:layout_constraintTop_toBottomOf="@+id/editProductNameDesc">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editProductNameTxtInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:hint="@string/productNamePlaceholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editProductQuantityTxtLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editProductDesc"
+        app:layout_constraintTop_toBottomOf="@+id/editProductNameDesc2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editProductQuantityTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/productQuantityPlaceholder"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editProductAmountTxtLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editProductDesc"
+        app:layout_constraintTop_toBottomOf="@+id/editProductNameDesc4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editProductAmountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/productAmountPlaceholder"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/editProductDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Отредактируйте данные о товаре:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/editProductNameDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Название товара:"
+        app:layout_constraintStart_toStartOf="@+id/editProductDesc"
+        app:layout_constraintTop_toBottomOf="@+id/editProductDesc" />
+
+    <TextView
+        android:id="@+id/editProductNameDesc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Количество товара:"
+        app:layout_constraintStart_toStartOf="@+id/editProductNameTxtLayout"
+        app:layout_constraintTop_toBottomOf="@+id/editProductNameTxtLayout" />
+
+    <TextView
+        android:id="@+id/editProductNameDesc3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Количество товара:"
+        app:layout_constraintStart_toStartOf="@+id/editProductNameTxtLayout"
+        app:layout_constraintTop_toBottomOf="@+id/editProductNameTxtLayout" />
+
+    <TextView
+        android:id="@+id/editProductNameDesc4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Цена товара:"
+        app:layout_constraintStart_toStartOf="@+id/editProductQuantityTxtLayout"
+        app:layout_constraintTop_toBottomOf="@+id/editProductQuantityTxtLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,2 @@
+rootProject.name='ninjacat'
+include ':app'

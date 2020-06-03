@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.auth.registration.RegistrationFragment">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/ninjacat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/regLoginTxtLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regAppSign">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/regLoginTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/loginPlaceholder" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/regPasswordTxtLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regLoginTxtLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/regPasswordTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/passwordPlaceholder"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/regAppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appTitle"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/regAppSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appSign"
+        app:layout_constraintEnd_toEndOf="@+id/regAppTitle"
+        app:layout_constraintStart_toStartOf="@+id/regAppTitle"
+        app:layout_constraintTop_toBottomOf="@+id/regAppTitle" />
+
+    <Button
+        android:id="@+id/regRegBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="@color/cardview_dark_background"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="@string/regActionBtn"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/regPasswordTxtLayout"
+        app:layout_constraintStart_toStartOf="@+id/regPasswordTxtLayout"
+        app:layout_constraintTop_toBottomOf="@+id/regPasswordTxtLayout" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/regLoading"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/loader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginLinkDesc" />
+
+    <TextView
+        android:id="@+id/loginLinkDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/alreadyHaveAnAccount"
+        app:layout_constraintEnd_toStartOf="@+id/loginLink"
+        app:layout_constraintStart_toStartOf="@+id/regRegBtn"
+        app:layout_constraintTop_toBottomOf="@+id/regRegBtn" />
+
+    <TextView
+        android:id="@+id/loginLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/loginActionBtn"
+        android:textColor="@color/cardview_dark_background"
+        app:layout_constraintEnd_toEndOf="@+id/regRegBtn"
+        app:layout_constraintStart_toEndOf="@+id/loginLinkDesc"
+        app:layout_constraintTop_toTopOf="@+id/loginLinkDesc" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

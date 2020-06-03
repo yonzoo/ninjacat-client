@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/client_nav"
+    app:startDestination="@id/clientProductFragment">
+
+    <fragment
+        android:id="@+id/clientProductFragment"
+        android:name="com.android.client.ninjacat.screens.client.product.ClientProductFragment"
+        android:label="fragment_product_client"
+        tools:layout="@layout/fragment_product_client" />
+</navigation>

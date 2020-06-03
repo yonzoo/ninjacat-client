@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_nav"
+    app:startDestination="@id/adminProductFragment">
+    <fragment
+        android:id="@+id/adminProductFragment"
+        android:name="com.android.client.ninjacat.screens.admin.product.AdminProductFragment"
+        android:label="fragment_product_admin"
+        tools:layout="@layout/fragment_product_admin">
+        <action
+            android:id="@+id/action_adminProductFragment_to_adminCreateProductFragment"
+            app:destination="@id/adminCreateProductFragment" />
+        <action
+            android:id="@+id/action_adminProductFragment_to_adminEditProductFragment"
+            app:destination="@id/adminEditProductFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/adminSaleFragment"
+        android:name="com.android.client.ninjacat.screens.admin.sale.AdminSaleFragment"
+        android:label="fragment_sale_admin"
+        tools:layout="@layout/fragment_sale_admin" >
+        <action
+            android:id="@+id/action_adminSaleFragment_to_adminEditSaleFragment"
+            app:destination="@id/adminEditSaleFragment" />
+        <action
+            android:id="@+id/action_adminSaleFragment_to_adminCreateSaleFragment"
+            app:destination="@id/adminCreateSaleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminCreateProductFragment"
+        android:name="com.android.client.ninjacat.screens.admin.product.AdminCreateProductFragment"
+        android:label="AdminCreateProductFragment">
+        <action
+            android:id="@+id/action_adminCreateProductFragment_to_adminProductFragment"
+            app:destination="@id/adminProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminEditProductFragment"
+        android:name="com.android.client.ninjacat.screens.admin.product.AdminEditProductFragment"
+        android:label="AdminEditProductFragment">
+        <action
+            android:id="@+id/action_adminEditProductFragment_to_adminProductFragment"
+            app:destination="@id/adminProductFragment" />
+        <argument
+            android:name="id"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminCreateSaleFragment"
+        android:name="com.android.client.ninjacat.screens.admin.sale.AdminCreateSaleFragment"
+        android:label="fragment_create_sale_admin"
+        tools:layout="@layout/fragment_create_sale_admin" >
+        <action
+            android:id="@+id/action_adminCreateSaleFragment_to_adminSaleFragment"
+            app:destination="@id/adminSaleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminEditSaleFragment"
+        android:name="com.android.client.ninjacat.screens.admin.sale.AdminEditSaleFragment"
+        android:label="fragment_edit_sale_admin"
+        tools:layout="@layout/fragment_edit_sale_admin" >
+        <action
+            android:id="@+id/action_adminEditSaleFragment_to_adminSaleFragment"
+            app:destination="@id/adminSaleFragment" />
+        <argument
+            android:name="id"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminExpenseFragment"
+        android:name="com.android.client.ninjacat.screens.admin.expense.AdminExpenseFragment"
+        android:label="fragment_expense_item_admin"
+        tools:layout="@layout/fragment_expense_item_admin" >
+        <action
+            android:id="@+id/action_adminExpenseFragment_to_adminCreateChargeFragment3"
+            app:destination="@id/adminCreateChargeFragment3" />
+        <action
+            android:id="@+id/action_adminExpenseFragment_to_adminChargeFragment"
+            app:destination="@id/adminChargeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminCreateChargeFragment3"
+        android:name="com.android.client.ninjacat.screens.admin.charge.AdminCreateChargeFragment"
+        android:label="fragment_create_charge_admin"
+        tools:layout="@layout/fragment_create_charge_admin" >
+        <action
+            android:id="@+id/action_adminCreateChargeFragment3_to_adminExpenseFragment"
+            app:destination="@id/adminExpenseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminChargeFragment"
+        android:name="com.android.client.ninjacat.screens.admin.charge.AdminChargeFragment"
+        android:label="fragment_charge_admin"
+        tools:layout="@layout/fragment_charge_admin" >
+        <action
+            android:id="@+id/action_adminChargeFragment_to_adminCreateChargeFragment3"
+            app:destination="@id/adminCreateChargeFragment3" />
+        <action
+            android:id="@+id/action_adminChargeFragment_to_adminEditChargeFragment"
+            app:destination="@id/adminEditChargeFragment" />
+        <argument
+            android:name="expenseName"
+            app:argType="string" />
+        <argument
+            android:name="expenseId"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminEditChargeFragment"
+        android:name="com.android.client.ninjacat.screens.admin.charge.AdminEditChargeFragment"
+        android:label="fragment_edit_charge_admin"
+        tools:layout="@layout/fragment_edit_charge_admin" >
+        <action
+            android:id="@+id/action_adminEditChargeFragment_to_adminExpenseFragment"
+            app:destination="@id/adminExpenseFragment" />
+        <argument
+            android:name="id"
+            app:argType="long" />
+        <argument
+            android:name="expenseName"
+            app:argType="string" />
+        <argument
+            android:name="expenseId"
+            app:argType="long" />
+    </fragment>
+</navigation>
